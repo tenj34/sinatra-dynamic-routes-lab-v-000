@@ -16,9 +16,13 @@ class App < Sinatra::Base
     @number_of_times = params[:number].to_i
     @phrase = params[:phrase]
     @combined_phrase = ""
-     @number_of_times.times do
+
+    @number_of_times.times do
       @combined_phrase += " #{@phrase}"
     end
-    "#{@combined_phrase}"
-  end
+
+  "#{@combined_phrase}"
+end
+
+
 end
