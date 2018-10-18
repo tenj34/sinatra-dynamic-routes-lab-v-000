@@ -21,8 +21,14 @@ class App < Sinatra::Base
       @combined_phrase += " #{@phrase}"
     end
 
-  "#{@combined_phrase}"
-end
+    "#{@combined_phrase}"
+  end
+  
+  get '/say/:word1/:word2/:word3/:word4/:word5' do
+    @all_words = []
+    params.each {|key, word| @all_words << word}
+    "#{@all_words.join(" ")}."
+  end
 
 
 end
